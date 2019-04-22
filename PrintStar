@@ -1,0 +1,12 @@
+#Star_pic 用python.turtle库画五角星
+import turtle
+import time  
+t = turtle.Pen() 
+t.pencolor('red') #python.turtle 的笔的颜色是红色
+t.fillcolor('red')#将要填充的背景的颜色也是红色
+t.begin_fill()
+for i in range(5): 
+    t.forward(100)
+    t.right(144)
+t.end_fill()
+time.sleep(2)
