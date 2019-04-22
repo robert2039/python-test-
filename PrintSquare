@@ -1,0 +1,8 @@
+#Square_pic python 用#来注释,用python.turtle库画正方形
+import turtle #打开turtle 库
+import time #打开time 
+t = turtle.Pen() #turtle.Pen 函数用来画图，赋值给t
+for i in range(4): #作一个循环
+    t.forward(100)
+    t.left(90)
+time.sleep(2)#绘图完成后停2秒
