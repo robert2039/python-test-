@@ -1,0 +1,42 @@
+import turtle 
+import time
+turtle.screensize(400,400)
+x = 0
+y = 50
+n = 120
+turtle.ht()
+turtle.goto(x, y)
+turtle.pendown()
+turtle.pencolor('black')
+turtle.begin_fill()
+turtle.fillcolor('white')
+for i in range(4):
+    turtle.forward(n)
+    turtle.left(90)
+turtle.end_fill()
+turtle.penup()
+turtle.goto(x, y + n)
+turtle.pendown()
+turtle.fillcolor('white')
+turtle.begin_fill()
+turtle.left(45)
+turtle.forward(int(n * 0.6))   #上方左侧斜线
+turtle.right(45)
+turtle.forward(n)    #上方横线
+turtle.left(360 - 135)
+turtle.forward(int(n * 0.6))    ##上方右侧斜线
+turtle.end_fill()
+ 
+turtle.left(45)
+turtle.penup()
+turtle.goto(x + n, y)
+ 
+turtle.pendown()
+turtle.left(135)
+turtle.forward(int(n * 0.6))
+turtle.left(45)
+turtle.forward(n)
+turtle.right(90)   #方向还原，向左
+turtle.penup()
+
+time.sleep(5)
