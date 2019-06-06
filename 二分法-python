@@ -1,0 +1,19 @@
+#二分法的python实现
+a = float(input("Please input the left value:\n"))
+b = float(input("Please input the right value:\n"))
+times = 0
+def func(x0):
+    return  x0**3+4*x0**2-10
+for i in range(8):
+    x0 =float( (a+b)*0.5)
+    y = func(x0)
+    if y < 0 :
+        a = x0
+        times += 1
+    elif y > 0:
+        b = x0
+        times += 1   
+    else :
+        break
+print("The solution of dichotomy is \n",x0)
+print("The times is \n",times)
