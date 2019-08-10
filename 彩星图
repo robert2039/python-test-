@@ -1,0 +1,59 @@
+#绘制的彩星图，会在几何画布上画出五颜六色各种形状的星星。
+import random
+import turtle
+
+def main():
+    turtle.bgcolor('white')
+    turtle.speed(0)
+    turtle.ht() #隐藏箭头
+    turtle .pencolor('white')
+    colors=['red','yellow','blue','green','orange','purple','lightblue','gray','pink','black','brown']
+    
+    for n in range(80):
+        x = random.randrange(0, turtle.window_width()//2)
+        y = random.randrange(0,turtle.window_height()//2)
+        size = random.randint(5,100)
+        turtle.left(60)
+        turtle.penup()
+        turtle.setpos(x,y)
+        turtle.pendown()
+        turtle .fillcolor(random.choice(colors)) 
+        turtle.begin_fill()  
+        for i in range(5):  
+            turtle.forward(size)  
+            turtle.right(144)   
+        turtle.end_fill()
+
+        turtle.penup()
+        turtle.setpos(-x,y)
+        turtle.pendown()
+        turtle .fillcolor(random.choice(colors)) 
+        turtle.begin_fill()  
+        for i in range(5):  
+            turtle.forward(size)  
+            turtle.right(144)   
+        turtle.end_fill()
+
+        turtle.penup()
+        turtle.setpos(-x,-y)
+        turtle.pendown()
+        turtle .fillcolor(random.choice(colors)) 
+        turtle.begin_fill()  
+        for i in range(5):  
+            turtle.forward(size)  
+            turtle.right(144)   
+        turtle.end_fill()
+
+        turtle.penup()
+        turtle.setpos(x,-y)
+        turtle.pendown()
+        turtle .fillcolor(random.choice(colors)) 
+        turtle.begin_fill()  
+        for i in range(5):  
+            turtle.forward(size)  
+            turtle.right(144)   
+        turtle.end_fill()
+
+    turtle.exitonclick()        
+if __name__ == "__main__":
+    main()
